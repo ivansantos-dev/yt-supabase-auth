@@ -2,10 +2,10 @@
 	let email = '';
 	let password = '';
 
-	const login = () => {
-		console.log(email, password);
+	const signInWithMagicLink = () => {
+		console.log(email);
 	};
-	const logout = () => {
+	const signOut = () => {
 		console.log('logout');
 	};
 </script>
@@ -14,16 +14,9 @@
 	<title>SvelteKit - Supabase Auth</title>
 </svelte:head>
 
-<form on:submit|preventDefault={login}>
+<form on:submit|preventDefault={signInWithMagicLink}>
 	<input type="email" name="email" id="email" placeholder="email" bind:value={email} />
-	<input
-		type="password"
-		name="password"
-		id="password"
-		placeholder="password"
-		bind:value={password}
-	/>
-	<button type="submit">Login</button>
+	<button type="submit">Sign In with Magic Link</button>
 </form>
 
-<button on:click={logout}>Logout</button>
+<button on:click={signOut}>Sign Out</button>
