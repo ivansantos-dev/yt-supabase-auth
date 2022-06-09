@@ -1,6 +1,5 @@
 <script lang="ts">
 	let email = '';
-	let password = '';
 
 	const signInWithMagicLink = () => {
 		console.log(email);
